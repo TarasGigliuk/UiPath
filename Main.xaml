@@ -85,7 +85,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="865,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3qglgTNFCU2nmkimYAQuOgAAAAACAAAAAAAQZgAAAAEAACAAAAA0aVRrHDkVVRQ4P5XqsNdgA3wfks7UixZPl6kpSPiwEwAAAAAOgAAAAAIAACAAAACUfEMd05peh5rQefd0333B/GS7P7iRoRSmsYn0C0wLGRAAAAAS8ncR+RbZKX6o/SLMA5zUQAAAADnAoYQSZy3ylhShL5/hyCnrUAb76LMq+i3AsyB/rrss8PndPmEDkuk/1ZCpqEEDnvPyakFF5/Lb2Po87t7jSRc=" Result="[Setpwd]" />
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="865,813" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\Тарас\Documents\Email.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="865,813" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="C:\Users\Тарас\Documents\Email1.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -121,9 +121,7 @@
                         <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Dear &quot;+row(&quot;Name&quot;).ToString+&quot;,, We are very happy to inform that you are selected in inteview. your DOJ is&quot; +row(&quot;DOJ&quot;).ToString+&quot;.PFA Docs about Company.&quot;]" DisplayName="Send SMTP Mail Message" Email="gigliuk.taras90@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[Setpwd]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Congratulations!!! You are Selected!!!" To="[row(&quot;Email&quot;).ToString]">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                              <InArgument x:TypeArguments="x:String">
-                                <Literal x:TypeArguments="x:String">Sample.pdf</Literal>
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String">Sample.pdf</InArgument>
                             </scg:List>
                           </ui:SendMail.Files>
                         </ui:SendMail>
